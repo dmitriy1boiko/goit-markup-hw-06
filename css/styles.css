@@ -56,7 +56,7 @@ img {
 .button {
   font-family: inherit;
   border-radius: 4px;
-  display:flex;
+  display: flex;
   justify-content: center;
   text-align: center;
   border: 0;
@@ -267,7 +267,7 @@ input {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.backdrop-form{
+.backdrop-form {
   width: 100%;
 }
 .button-modal {
@@ -315,7 +315,7 @@ input {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color-dark);
 }
-.form-fild{
+.form-fild {
   margin-bottom: 10px;
 }
 .backdrop-label {
@@ -324,63 +324,87 @@ input {
   letter-spacing: 0.01em;
 }
 .backdrop-input {
+  outline: transparent;
   width: 100%;
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-input:hover,
-.backdrop-input:focus{
-  border-color: var(--acent-color);
+.backdrop-input:focus {
+  border: 1px solid var(--acent-color);
 }
-.backdrop-input:focus+.backdrop-icon,
-.backdrop-input:hover+.backdrop-icon{
+.backdrop-input:focus + .backdrop-icon,
+.backdrop-input:hover + .backdrop-icon {
   fill: var(--acent-color);
 }
-.backdrop-label-textarea{
+.backdrop-label-textarea {
   display: flex;
   flex-direction: column;
   font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.01em;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
-.backdrop-textarea{
+.backdrop-textarea {
   cursor: pointer;
   padding: 12px 16px;
   height: 120px;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
-.backdrop-checkbox{
+.backdrop-textarea:focus {
+  outline: transparent;
+  border: 1px solid var(--acent-color);
+}
+.checkbox-label {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
-}
-.backdrop-checkbox label{
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.backdrop-link{
-  font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: var(--acent-color);
+.checkbox {
+  appearance: none;
+  position: absolute;
 }
-.button-backdrop{
+.checkbox-icon {
+  border: 2px solid var(--secondary-text-color-dark);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.span-lable {
+  margin-right: 8px;
+}
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--acent-color);
+  background-color: var(--acent-color);
+}
+.backdrop-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--acent-color);
+}
+.button-backdrop {
   font-weight: 700;
-font-size: 16px;
-line-height: 30px;
-letter-spacing: 0.06em;
-color: var(--primary-text-color-light);
-background: var(--acent-color);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-margin: 0 auto;
-padding: 10px 52px;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color-light);
+  background: var(--acent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+  padding: 10px 52px;
 }
 .button-backdrop:hover,
-.button-backdrop:focus{
+.button-backdrop:focus {
   background: var(--acent-color-hover);
 }
 .peculiarities {
@@ -634,13 +658,19 @@ padding: 10px 52px;
   text-transform: uppercase;
   color: var(--primary-color);
 }
-.block-futer-form input {
+.futer-form-input {
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   width: 100%;
+  outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.block-futer-form input::placeholder {
+.futer-form-input:hover,
+.futer-form-input:focus{
+  border: 1px solid var(--acent-color);
+}
+.futer-form-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;

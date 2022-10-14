@@ -334,7 +334,7 @@
       <form class="futer-form">
         <label class="futer-form-label">Підпишіться на розсилку
           <div class="block-futer-form">
-            <input type="email" name="mail-futer" placeholder="E-mail" >
+            <input class="futer-form-input" type="email" name="mail-futer" placeholder="E-mail" >
             <button type="submit" class="button-futer-form button">
                Підписатися 
                <svg class="futer-form-icon" width="24" height="24">
@@ -385,11 +385,14 @@
           Коментар
           <textarea class="backdrop-textarea" name="comment" placeholder="Введіть текст"></textarea>
         </label>
-        <div class="backdrop-checkbox">
-          <input type="checkbox" name="checkbox" id="policy">
-          <label for="policy" > Погоджуюся з розсилкою та приймаю</label>
-          <a href="#" class="backdrop-link">Умови договору</a>
-        </div>
+          <label class="checkbox-label">
+            <input class="checkbox" type="checkbox" name="checkbox">
+              <svg class="checkbox-icon" width="15" height="15">
+                <use href="./images/symbol-defs.svg#icon-Vector"></use>
+              </svg>
+            <span class="span-lable">Погоджуюся з розсилкою та приймаю</span>
+            <a href="#" class="backdrop-link">Умови договору</a>
+          </label>
         <button type="submit" class="button-backdrop button">Відправити</button>
       </form>
       </div>
