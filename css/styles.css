@@ -58,7 +58,7 @@ img {
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   border: 0;
   cursor: pointer;
 }
@@ -298,6 +298,8 @@ input {
 }
 .backdrop-icon-wrap {
   position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 .backdrop-icon {
   position: absolute;
@@ -307,6 +309,8 @@ input {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-text {
+  margin: 0 auto;
+  display: block;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -314,9 +318,6 @@ input {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color-dark);
-}
-.form-fild {
-  margin-bottom: 10px;
 }
 .backdrop-label {
   font-size: 12px;
@@ -341,6 +342,7 @@ input {
 .backdrop-label-textarea {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -349,12 +351,12 @@ input {
   cursor: pointer;
   padding: 12px 16px;
   height: 120px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.backdrop-textarea:focus {
+.backdrop-textarea:focus,
+.backdrop-textarea:hover {
   outline: transparent;
   border: 1px solid var(--acent-color);
 }
@@ -642,13 +644,15 @@ input {
 .footer-networks-link:focus {
   background-color: #2196f3;
 }
-.futer-form {
-  display: block;
-  width: 570px;
+.futer-form-icon {
+  background-size: cover;
 }
 .block-futer-form {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
+  width: 570px;
 }
 .futer-form-label {
   font-weight: 700;
@@ -659,15 +663,15 @@ input {
   color: var(--primary-color);
 }
 .futer-form-input {
+  width: 100%;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  width: 100%;
   outline: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .futer-form-input:hover,
-.futer-form-input:focus{
+.futer-form-input:focus {
   border: 1px solid var(--acent-color);
 }
 .futer-form-input::placeholder {
